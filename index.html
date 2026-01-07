@@ -81,6 +81,32 @@
             box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
         }
 
+        .profile-image {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 20px;
+            overflow: hidden; /* 🔴 IMPORTANT */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;   /* 🔥 THIS is the key */
+            display: block;
+        }
+
+        .profile-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.1);
+        }
+
+        .profile-image {
+            position: relative;
+        }
+
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -225,10 +251,10 @@
             align-items: start;
         }
 
-        .profile-image {
+       .profile-image {
             width: 100%;
             aspect-ratio: 1;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%); 
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -236,7 +262,7 @@
             font-size: 6rem;
             color: white;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
+        } 
 
         .about-text p {
             line-height: 1.8;
@@ -482,7 +508,9 @@
     <section id="about">
         <h2>About Me</h2>
         <div class="about-content">
-            <div class="profile-image">SA</div>
+            <div class="profile-image">
+                <img src="sohaib.png" alt="Sohaib Asif">
+            </div>
             <div class="about-text">
                 <p>
                     I thrive on transforming complex datasets into clear narratives that drive decision-making. With over two years of experience as an Associate Technical Consultant and Techno Functional Consultant at Kalsoft, I've had the privilege of working with clients across various sectors to create visually appealing reports using tools like Power BI and OACS.
@@ -611,6 +639,10 @@
                     <a href="https://www.linkedin.com/in/sohaib-asif1" target="_blank">LinkedIn Profile</a>
                 </div>
                 <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <a href="tel:+491276655987">+4917667706258</a>
+                </div>
+                <div class="contact-item">
                     <div class="contact-icon">📍</div>
                     <span style="color: #555;">Cottbus, Brandenburg, Germany</span>
                 </div>
@@ -619,7 +651,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Sohaib Asif. All rights reserved.</p>
+        <p>&copy; 2026 Sohaib Asif. All rights reserved.</p>
         <p style="margin-top: 0.5rem; opacity: 0.7;">AI Specialist | Data Analytics Expert | Business Intelligence Consultant</p>
     </footer>
 
